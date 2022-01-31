@@ -18,6 +18,12 @@ https://devops.stackexchange.com/questions/2731/downloading-docker-images-from-d
 - docker build -t devopstp/database .
 - docker run --name=db -v data:/var/lib/postgresql/data -t devopstp/database
 - docker image prune
+
+- docker build -t devopstp/api .
+- docker run -p 8080:8080 --name=api -t devopstp/api
+
+- docker build -t devopstp/httpserver .
+- docker run -p 80:80 --name=httpserver -t devopstp/httpserver
 ```
 
 ## Backend
