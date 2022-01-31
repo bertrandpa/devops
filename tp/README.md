@@ -1,5 +1,7 @@
 # TP part 01 - Docker
 
+https://devops.stackexchange.com/questions/2731/downloading-docker-images-from-docker-hub-without-using-docker
+
 ## Database
 
 - 1 Why should we run the container with a flag -e to give the environment variables ?
@@ -8,6 +10,7 @@
 
 
 - 1.1 Why do we need a volume to be attached to our postgres container
+
 `It enables us to persist data onto the host's filesystem`
 
 
@@ -22,5 +25,4 @@
 - 1.2 Why do we need a multistage build ? And explain each steps of
 this dockerfile ?
 
-`We need to build AND run, these are 2 distinct steps, we can split them across 2 separate images. The building phase only need a jdk and maven. And the other one requires a JRE in order to run the java code properly.`
-`Multistage enable us to do that exactly`
+`We need to build AND run, these are 2 distinct steps, we can split them across 2 separate images. The building phase only need a jdk and maven. And the other one requires a JRE in order to run the java code properly. Multistage enable us to do that exactly`
