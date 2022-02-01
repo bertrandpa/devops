@@ -1,26 +1,23 @@
 version: "3.3"
 services:
   api:
-    build: ./simple-api/
+    build: simple-api/
     container_name: api
-    expose:
-      - 8080
     networks:
       - app-network
     depends_on:
       - db
-  #port 5432 already exposed in postgres img
+    restart: always
   db:
     build: database/
     container_name: db
-    expose:
-      - 5432
     networks:
       - app-network
     volumes:
-      - data:/var/lib/postgresql/data:ro
+      - data:/var/lib/postgresql/data
+    restart: always
   httpd:
-    build: ./httpserver/
+    build: httpserver/
     container_name: httpserver
     ports:
       - "80:80"
@@ -28,6 +25,7 @@ services:
       - app-network
     depends_on:
       - api
+    restart: always
 volumes:
   data:
 networks:
