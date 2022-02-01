@@ -5,8 +5,8 @@ ENV MYAPP_HOME /opt/myapp
 # Change de répertoire
 WORKDIR $MYAPP_HOME
 # Copie des fichers sources et du pom du projet seulement
-COPY app/pom.xml .
-COPY app/src ./src
+COPY pom.xml .
+COPY src ./src
 #Construction du package avec maven
 RUN mvn clean package -DskipTests
 # Run

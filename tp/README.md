@@ -24,6 +24,7 @@ https://devops.stackexchange.com/questions/2731/downloading-docker-images-from-d
 
 - docker build -t devopstp/httpserver .
 - docker run -p 80:80 --name=httpserver -t devopstp/httpserver
+- --network=app
 ```
 
 ## Backend
@@ -32,3 +33,21 @@ https://devops.stackexchange.com/questions/2731/downloading-docker-images-from-d
 this dockerfile ?
 
 `We need to build AND run, these are 2 distinct steps, we can split them across 2 separate images. The building phase only need a jdk and maven. And the other one requires a JRE in order to run the java code properly. Multistage enable us to do that exactly`
+
+## Httpd
+
+- 1.3 Why do we need a reverse proxy
+
+
+## docker-compose
+
+- 1.4 Why is docker-compose so important
+
+
+Main CMD :
+
+`expose vs ports : expose open port only to other containers and ports to host too`
+`build : specify Dockerfile path to be used`
+`networks : declare the different networks and reference them in the services, services within the same network will be able to see each other`
+
+`depends_on : define dependencies between services`
