@@ -50,4 +50,9 @@ Main CMD :
 `build : specify Dockerfile path to be used`
 `networks : declare the different networks and reference them in the services, services within the same network will be able to see each other`
 
-`depends_on : define dependencies between services`
+`depends_on : define dependencies between services, here api depends on database, the db container will be launched first`
+
+
+# TP part 02 - CI/CD
+
+- 2.1 What are testcontainers ?
