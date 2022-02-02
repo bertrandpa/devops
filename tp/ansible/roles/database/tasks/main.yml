@@ -1,0 +1,11 @@
+- name: Run Database
+  docker_container:
+    name: db
+    image: fastcardonbitter/tp-devops-cpe:database
+    state: started
+    #TODO use env_file
+    env:
+      POSTGRES_DB: db
+      POSTGRES_USR: usr
+      POSTGRES_PASSWORD: pwd
+    volumes: data:/var/lib/postgresql/data

@@ -56,3 +56,23 @@ Main CMD :
 # TP part 02 - CI/CD
 
 - 2.1 What are testcontainers ?
+
+
+# TP part 03 - Ansible 
+
+
+
+`Get the OS`
+* ansible all -i tp/ansible/inventories/setup.yml -m setup -a "filter=ansible_distribution*"
+
+`Remove httpd`
+* ansible all -i inventories/setup.yml -m yum -a "name=httpd state=absent" --become
+
+`Playbook with ping play`
+* ansible-playbook -i inventories/setup.yml playbook.yml
+
+`Ansible init role`
+- ansible-galaxy init network
+- ansible-galaxy init database
+- ansible-galaxy init app
+- ansible-galaxy init proxy

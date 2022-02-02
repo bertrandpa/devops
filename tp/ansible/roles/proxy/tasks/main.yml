@@ -1,0 +1,9 @@
+---
+# tasks file for proxy
+- name: Run Proxy
+  docker_container:
+    name: httpserver
+    image: fastcardonbitter/tp-devops-cpe:httpserver
+    state: started
+    ports:
+     - "80:80"

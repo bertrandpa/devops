@@ -1,0 +1,7 @@
+---
+# tasks file for api
+- name: Run app
+  docker_container:
+    name: api
+    image: fastcardonbitter/tp-devops-cpe:simple-api
+    state: started

@@ -1,0 +1,7 @@
+---
+# tasks file for front
+- name: Run Front
+  docker_container:
+    name: front
+    image: fastcardonbitter/tp-devops-cpe:front
+    state: started

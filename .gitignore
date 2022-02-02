@@ -10,3 +10,7 @@ target/
 
 ### VS Code ###
 .vscode/
+
+config
+
+node_modules/

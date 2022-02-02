@@ -1,5 +1,13 @@
 version: "3.3"
 services:
+  front:
+    build: front/
+    container_name: front
+    networks:
+      - app-network
+    depends_on:
+      - httpd
+      - api
   api:
     build: simple-api/
     container_name: api
@@ -21,6 +29,7 @@ services:
     container_name: httpserver
     ports:
       - "80:80"
+      - "8080:8080"
     networks:
       - app-network
     depends_on:

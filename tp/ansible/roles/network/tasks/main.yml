@@ -1,0 +1,10 @@
+# tasks file for network
+
+- name: Create app network
+  docker_network:
+    name: app-network
+    connected:
+      - api
+      - db
+      - httpserver
+      - front
