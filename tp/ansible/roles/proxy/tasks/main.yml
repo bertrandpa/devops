@@ -6,4 +6,4 @@
     image: fastcardonbitter/tp-devops-cpe:httpserver
     state: started
     ports:
-     - "80:80"
+      - "80:80"

@@ -4,4 +4,6 @@
   docker_container:
     name: api
     image: fastcardonbitter/tp-devops-cpe:simple-api
+    env:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/db
     state: started

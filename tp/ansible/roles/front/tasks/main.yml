@@ -5,3 +5,6 @@
     name: front
     image: fastcardonbitter/tp-devops-cpe:front
     state: started
+    env:
+      VUE_APP_API_URL: bertrand.pautet.takima.cloud/api
+
