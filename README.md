@@ -84,7 +84,7 @@ Main options
 `Ping`
 * ansible all -m ping -i inventory.yml
 
-`Playbook with ping play`
+`Launch playbook with inventory`
 * ansible-playbook -i inventories/setup.yml playbook.yml
 
 `Ansible init roles`
