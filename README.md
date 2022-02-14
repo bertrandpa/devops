@@ -68,7 +68,7 @@ Main options
 # TP part 02 - CI/CD
 
 - 2.1 What are testcontainers ?
-- testcontainers are lightweight docker container used for testing : [cf](https://www.testcontainers.org/)
+- testcontainers are lightweight docker container used for testing : [doc](https://www.testcontainers.org/)
 
 - 2.2 For what purpose do we need to push docker images ?
 - We push them in a cloud storage like dockerhub so we can pull them from everywhere later. We can also use tags when pushing them to version our images.
@@ -83,6 +83,7 @@ Main options
 
 `Ping`
 * ansible all -m ping -i inventory.yml
+
 `Playbook with ping play`
 * ansible-playbook -i inventories/setup.yml playbook.yml
 
